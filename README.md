@@ -8,8 +8,6 @@ O objetivo é aplicar conceitos de redes e programação, criando soluções pr�
 
 Python 3.x
 
-Bibliotecas padrão do Python (socket, threading, etc.)
-
 Git e GitHub para versionament
 
 🏫 Sobre
