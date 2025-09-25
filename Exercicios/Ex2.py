@@ -7,4 +7,4 @@ Height = float(input('Me de a medida da altura:'))
 area = ((Lbase+Sbase)*Height)/2
 
 #Print do resultado
-print(f'A área do trapezio é {area:.2f}.')
+print(f'A área do trapezio é {area:.1f}.')
