@@ -8,4 +8,4 @@ pi = 3.1416
 area = pi*raio**2
 
 #Print do resultado.
-print(f'A área do circulo é {area:.2f}.')
+print(f'A área do circulo é {area:.2f}')
