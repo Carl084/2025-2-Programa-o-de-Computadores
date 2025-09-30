@@ -33,7 +33,7 @@ while True:
         #Calculo e obtenho o troco
         Change = NoteValue-TotalPay
         #Troco maior que zero
-        if Change >= 0:
+        if Change > 0:
             #informo o valor pago e troco
             print(f'Você pagou {NoteValue}, tudo foi {TotalPay} e o seu troco foi {Change}')
             break
