@@ -1,16 +1,20 @@
 while True:
     #Pedindo as notas
-    note1 = int(input('Informe a nota da etapa 1:'))
-    note2 = int(input('Informe a nota da etapa 2:'))
-    if not note1>=0 and not note2<=100 and not note2>=0 and not note2<=100:
-        print('Nota 1 ou 2 ultrapassou o limite')
+    note1 = int(input('Informe a nota da etapa 1 (0 a 100):'))
+    note2 = int(input('Informe a nota da etapa 2 (0 a 100):'))
+    #Verificar erros no input das notas
+    if not note1>=0 and not note2<=100:
+        print('Nota 1 ultrapassou o limite')
+    elif not note2>=0 and not note2<=100:
+        print('Nota 2 ultrapassou o limite')
     #Pedindo a carga horaria e faltas do aluno
     workload = int(input('Infome a carga horaria da diciplina (h/a):'))
     lack = int(input('Informe a quantidade de faltas do aluno:'))
-    if not workload>=0:
+    #Verificar erros nos input de falta e carga/hora
+    if workload<=0:
         print('Uma carga horaria negativa???')
-    if not lack>=0 and not lack>workload:
-        print('A quantidade de faltas passou o limite existente.')
+    elif lack<=0 and lack>workload:
+        print('A quantidade de faltas ultrapassou a carga horaria.')
     #Calculando a media das notas
     average = int((note1*2 + note2*3)/5)
     frequency = int((1-(lack/workload))*100)
