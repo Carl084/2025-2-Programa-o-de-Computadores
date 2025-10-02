@@ -1,6 +1,6 @@
 #Peço as cordenadas X e Y
-x = float(input('Informe a cordenada X:'))
-y = float(input('Informe a cordenada Y:'))
+x = float(input('Informe a coordenada X:'))
+y = float(input('Informe a coordenada Y:'))
 #Quadrante 1
 if (x and y>0):
     print('O ponto está no 1° quadrante.')
