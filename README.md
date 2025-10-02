@@ -16,4 +16,8 @@ Este repositório foi desenvolvido como parte das atividades da disciplina de Re
 
 Ele serve tanto como registro acadêmico quanto como portfólio de aprendizado.
 
+<<<<<<< HEAD
 ✨ Autor - Carlos W. F. Lima
+=======
+✨ Autor - Carlos W. F. Lima
+>>>>>>> d66a152d0ea33225ca7c5d39bcc99e1fc22a79d0
