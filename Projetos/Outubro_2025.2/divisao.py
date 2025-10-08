@@ -1,14 +1,21 @@
 import sys
 
 try:
-   intDividendo = int(input('Informe o Dividendo: '))
-   intDivisor   = int(input('Informe o Divisor..: '))
-   quociente    = intDividendo / intDivisor
+   #Solicitar os números que serão parte da divisão
+   dividendo = int(input('Informe o dividendo: '))
+   divisor = int(input('Informe o divisor: '))
+   
+   #Calculo para encontrar o resultado
+   quociente = dividendo/divisor
+
+#Verrificar possiveis erros
 except ZeroDivisionError:
-   sys.exit('ERRO: Divisão por Zero não é permitida...')
+   sys.exit('ERRO: Divisão por "zero" não é permitida.')
 except ValueError:
-   sys.exit('ERRO: Informe apenas números inteiros...')
+   sys.exit('ERRO: Informe apenas números inteiros.')
 except Exception as strErro:
    sys.exit(f'EXCEÇÃO: {sys.exc_info()[0]} -> {strErro}')
+
+#Imprimir o resiltado
 else:
-   print(f'{intDividendo} / {intDivisor} = {quociente:.2f}')
+   print(f'{dividendo}/{divisor}={quociente:.2f}')

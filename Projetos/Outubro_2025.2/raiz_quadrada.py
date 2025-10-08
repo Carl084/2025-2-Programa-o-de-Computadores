@@ -1,19 +1,27 @@
 import sys
 
 try:
-   intValor = int(input('Informe um valor inteiro: '))
+   #Solicitar um valor
+   Valor = int(input('Informe um valor inteiro: '))
     
-   # Criando a exceção 'NegativeSquareRoot' para números negativos
-   if intValor < 0:
+   #Exceção para números negativos
+   if Valor < 0:
        raise Exception('NegativeSquareRoot')
    
-   intRaizQuadrada = intValor ** 0.5
+   #Calcular a raiz
+   RaizQuadrada = Valor**0.5
+
+#Verificar se há erros
 except ValueError:
    sys.exit('ERRO: Por favor, insira apenas números inteiros.')
 except Exception as strErro:
+   
+   #Retornar o erro do número negativo
    if str(strErro) == 'NegativeSquareRoot':
        sys.exit('ERRO: Não há Raiz Real para números negativos...')
    else:
        sys.exit(f'ERRO: {strErro}')
+
+#Imprimir resultado da raiz quadrada
 else:
-   print(f'A raiz quadrada de {intValor} é {intRaizQuadrada:.2f}')
+   print(f'A raiz quadrada de {Valor} é {RaizQuadrada:.2f}')
