@@ -1,3 +1,4 @@
+pessoa = []
 import sys
 
 try:
