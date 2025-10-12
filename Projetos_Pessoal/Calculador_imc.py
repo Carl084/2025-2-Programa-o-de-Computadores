@@ -38,11 +38,6 @@ def calcular_gordura_a_perder(peso_atual, peso_ideal):
     gordura_a_perder = peso_atual - peso_ideal
     return gordura_a_perder
 
-def calcular_massa_muscular(peso, percentual_gordura):
-    gordura = calcular_gordura(peso, percentual_gordura)
-    massa_muscular = peso - gordura
-    return massa_muscular
-
 peso = float(input('Digite seu peso(Kg):'))
 altura = float(input('Digite sua altura(m):'))
 idade = int(input('Digite sua idade:'))
