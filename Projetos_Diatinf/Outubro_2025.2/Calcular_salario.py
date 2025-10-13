@@ -27,7 +27,7 @@ else:
         sys.exit('ERRO: O valor de horas trabalhadas está negativo.')
 
 if valorHR==0:
-    print('Você esta entre 1539 a 1888.')
+    print('Você esta entre 1539 a 1887.')
 
 #Calculo de salario /s hora extra
 salario = horas * valorHR
