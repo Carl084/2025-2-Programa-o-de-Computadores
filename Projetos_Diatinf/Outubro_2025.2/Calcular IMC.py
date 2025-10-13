@@ -14,6 +14,7 @@
 
 import sys
 
+#Função para calcular IMC
 def calcular_imc(peso, altura):
     imc = peso/(altura**2)
     if imc<18.5:
@@ -27,8 +28,11 @@ def calcular_imc(peso, altura):
     return imc, situacao
 
 try:
+    #Solicitar info
     peso = float(input('Digite seu peso (Kg):'))
     altura = float(input('Digite sua altura (Metro):'))
+
+#verificar possiveis erros
 except ValueError:
     sys.exit('Erro: Digite apenas numeros.')
 except Exception as strErro:
@@ -38,6 +42,8 @@ if altura<0.40:
 if peso<1:
     sys.exit('Erro no massa corporal: está muito leve!')
 
+#Chamar função e receber info
 imc, situacao = calcular_imc(peso, altura)
 
+#Imprimir resultados
 print(f'Seu IMC é {imc:.1f} e está na classificação de {situacao}.')
