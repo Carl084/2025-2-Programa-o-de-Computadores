@@ -19,7 +19,15 @@ try:
 except ValueError:
     sys.exit('Digite apenas numeros.')
 except Exception as strErro:
-   sys.exit(f'EXCEÇÃO: {sys.exc_info()[0]} -> {strErro}')
+   sys.exit(f'Erro: {strErro}')
+else:
+    if horas<0:
+        sys.exit('ERRO: O número de horas está negativo.')
+    if valorHR<0:
+        sys.exit('ERRO: O valor de horas trabalhadas está negativo.')
+
+if valorHR==0:
+    print('Você esta entre 1539 a 1888.')
 
 #Calculo de salario /s hora extra
 salario = horas * valorHR
