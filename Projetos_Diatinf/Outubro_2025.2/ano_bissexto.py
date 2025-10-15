@@ -21,12 +21,9 @@ import sys
 
 #Função para verificar ano bissexto
 def verificar_ano(ano):
-    #Verificar se é divisivel por 400
-    if (ano%400==0):
-        return True
-    #Verificar se é divisivel por 4
-    #e sé dividido 100, resulta em zero
-    elif (ano%4==0) and (ano%100!=0):
+    #Verificar se é divisivel por 4 e por 400
+    #Sé é dividido por 100
+    if(ano%4==0)and(ano%100!=0)or(ano%400==0):
         return True
     else:
         return False
