@@ -24,31 +24,75 @@
     Dica: Utilize a biblioteca math.S
     https://docs.python.org/3/library/math.html
 '''
-
+import math
 import sys
 
-def veriicar_lados(IntladoA, IntladoB, IntladoC):
-    if IntladoA and IntladoB >= IntladoC:
-        return True
-    elif IntladoA and IntladoC >= IntladoB:
-        return True
-    elif IntladoC and IntladoB >= IntladoA:
+#Verificar sé ha uma possivel formação de um triagulo
+def verificar_lados(a,b,c):
+    if a + b > c or a + c > b or b + c > a:
+        print('Os lados informados formam um triângulo.')
         return True
     else:
+        print('Os lados informados não formam um triângulo válido.')
         return False
 
-def calcular_cosseno(IntladoA, IntladoB, IntladoC):
+#Encontrar os angulos do triagulo
+def Calcular_angulos(a,b,c):
+    cosA = (b**2 + c**2 - a**2)/(2*b*c)
+    cosB = (a**2 + c**2 - b**2)/(2*a*c)
+    cosC = (a**2 + b**2 - c**2)/(2*a*b)
+
+    A = math.degrees(math.acos(cosA))
+    B = math.degrees(math.acos(cosB))
+    C = math.degrees(math.acos(cosC))
     
+    return A,B,C
 
+#Classificar formato do triagulo
+def classificacao_agulo(A,B,C):
+    if A and B and C < 90:
+        AngClass = 'Agudo'
+    if A or B or C == 90:
+        AngClass = 'Retângulo'
+    if A or B or C > 90:
+        AngClass = 'Obtuso'
+
+    return AngClass
+
+#classificar o tipo de triagulo
+def classificacao_lados(a,b,c):
+    if (a != b) or (a != c) or (b != c):
+        LadClass = 'Escaleno'
+    if a or b == c or b == a:
+        LadClass = 'Isósceles'
+    if a == b == c:
+        LadClass = 'Equilátero'
+
+    return LadClass
+
+#Inicio
+print('Vamos verificar o triagulo!')
 try:
-    print('Vamos verificar o triagulo!')
-    IntladoA = int(input('Informe o lado A:'))
-    IntladoB = int(input('Informe o lado B:'))
-    IntladoC = int(input('Informe o lado C:'))
+    #Pedir as info
+    a = int(input('Informe o lado A:'))
+    b = int(input('Informe o lado B:'))
+    c = int(input('Informe o lado C:'))
 
+#Verificar possiveis erros
 except ValueError:
     sys.exit('Erro: informe apenas números inteiros.')
 except Exception as strErro:
     sys.exit(f'{strErro}')
 
-if veriicar_lados(IntladoA, IntladoB, IntladoC):
+#Chamar as funcoes e imprimir os resultados
+if verificar_lados(a,b,c):
+    A,B,C = Calcular_angulos(a,b,c)
+    AngClass = classificacao_agulo(A,B,C)
+    LadClass = classificacao_lados(a,b,c)
+
+    print(f'O triagulo é {LadClass} e {AngClass}')
+    print(f'A área do triagulo é {a * b / 2}')
+    print(f'O angulo A tem {A}°')
+    print(f'O angulo B tem {B}°')
+    print(f'O angulo C tem {C}°')
+    print(f'A soma dos angulos é {A+B+C}°')
