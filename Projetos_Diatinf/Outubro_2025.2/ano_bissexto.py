@@ -19,17 +19,22 @@
 
 import sys
 
+#Função para verificar ano bissexto
 def verificar_ano(ano):
+    #Verificar se é divisivel por 400
     if (ano%400==0):
         return True
+    #Verificar se é divisivel por 4
+    #e sé dividido 100, resulta em zero
     elif (ano%4==0) and (ano%100!=0):
         return True
     else:
         return False
 
 try:
+    #Verificar possiveis erros
     ano = int(input('Digite um ano:'))
-    
+
 except ValueError:
     sys.exit('Erro: Digite apenas numeros inteiros')
 except Exception as strErro:
@@ -38,6 +43,8 @@ except Exception as strErro:
 if ano<0:
     sys.exit(f'Erro: digite um ano D.C.')
 
+#Chamar função para verificar
+#Imprimir de acordo com True ou False
 if verificar_ano(ano):
     print(f'O ano {ano} é bissexto.')
 else:
