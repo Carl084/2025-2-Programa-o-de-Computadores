@@ -9,6 +9,7 @@ intsomaimpares = 0
 intconador = 1
 
 # loop para contar de 1 a 100
+# Em While
 while intconador <= 100:
 
     # Verifica se o número é par ou ímpar e acumula a soma
@@ -19,6 +20,18 @@ while intconador <= 100:
         intsomaimpares += intconador
 
     intconador += 1
+
+print(f'Soma dos númeoros pares: {intsomapares}')
+print(f'Soma dos números ímpares: {intsomaimpares}')
+
+# Em for
+for intcontador in range(1, 101):
+
+    if (intconador%2) == 0:
+        intsomapares += intconador
+
+    else:
+        intsomaimpares += intconador
 
 print(f'Soma dos númeoros pares: {intsomapares}')
 print(f'Soma dos números ímpares: {intsomaimpares}')
