@@ -1,3 +1,4 @@
+
 '''
   Faça um programa que solicite ao usuário um número inteiro e 
   informe em quantas interações ele converge para a constante de 
