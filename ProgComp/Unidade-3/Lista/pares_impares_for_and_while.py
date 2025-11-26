@@ -18,6 +18,8 @@
         print(f'{intNumero} é ímpar')
 '''
 
+    #///////////////////////////////////////
+
 lstNumeros = list()
 
 intLimite  = 100
