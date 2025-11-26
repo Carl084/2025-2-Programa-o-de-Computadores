@@ -16,7 +16,7 @@
 
 import random
 
-Lista_valores = []
+List_values = []
 i = 0
 
 try:
@@ -25,8 +25,8 @@ except ValueError:
     print('Erro: Digite apenas números inteiros e positivos')
 else:
     while i < IntN:
-        IntValor_aleatorio = random.randint(1,100)
-        if IntValor_aleatorio not in Lista_valores:
-            Lista_valores.append(IntValor_aleatorio)
+        IntValue_random = random.randint(1,100)
+        if IntValue_random not in List_values:
+            List_values.append(IntValue_random)
             i += 1
-    print(f'Lista gerada: {Lista_valores}')
+    print(f'Lista gerada: {List_values}')
