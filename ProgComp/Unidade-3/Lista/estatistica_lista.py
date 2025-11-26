@@ -13,9 +13,11 @@
    - A variância dos valores na lista
    - O desvio padrão dos valores na lista
 '''
+
 import random
 
-Lista_valores = list()
+Lista_valores = []
+i = 0
 
 try:
     IntN = int(input('Digite um valor inteiro positivo: '))
@@ -24,8 +26,9 @@ except ValueError:
 if IntN <= 0 or IntN > 100:
     print('Erro: O número deve ser maior que 1 e menor que 100')
 else:
-    while len(Lista_valores) < IntN:
+    while i < IntN:
         IntValor_aleatorio = random.randint(1,100)
         if IntValor_aleatorio not in Lista_valores:
             Lista_valores.append(IntValor_aleatorio)
+            i += 1
     print(f'Lista gerada: {Lista_valores}')
