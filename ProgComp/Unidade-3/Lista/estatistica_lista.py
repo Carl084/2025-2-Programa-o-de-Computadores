@@ -29,4 +29,20 @@ else:
         if IntValue_random not in List_values:
             List_values.append(IntValue_random)
             i += 1
+    
+    List_values_salaries = sorted(List_values)
+    size = len(List_values_salaries)
+    
+    if len(List_values) % 2 == 0:
+        center1 = List_values_salaries[size//2-1]
+        center2 = List_values_salaries[size//2]
+        median = (center1)+(center2)/2
+    else:
+        median = List_values_salaries[size//2]
+        
     print(f'Lista gerada: {List_values}')
+    print(f'Lista orden.: {List_values_salaries}')
+    print(f'Soma dos valores na lista: {sum(List_values)}')
+    print(f'Média da lista: {sum(List_values)/len(List_values)}')
+    print(f'A mediana: {median}')
+    
