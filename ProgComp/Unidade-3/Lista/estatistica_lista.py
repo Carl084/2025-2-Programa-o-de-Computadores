@@ -23,8 +23,6 @@ try:
     IntN = int(input('Digite um valor inteiro positivo: '))
 except ValueError:
     print('Erro: Digite apenas números inteiros e positivos')
-if IntN <= 0 or IntN > 100:
-    print('Erro: O número deve ser maior que 1 e menor que 100')
 else:
     while i < IntN:
         IntValor_aleatorio = random.randint(1,100)
