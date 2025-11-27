@@ -48,7 +48,7 @@ else:
 
     print(f'Lista gerada: {List_values}')
     print(f'Lista orden.: {List_values_salaries}')
-    print(f'Soma dos valores na lista: {sum(List_values)}')
+    print(f'Soma da lista: {sum(List_values)}')
     print(f'Média da lista: {average}')
     print(f'O Valor maximo: {max(List_values_salaries)}')
     print(f'O Valor minimo: {min(List_values_salaries)}')
