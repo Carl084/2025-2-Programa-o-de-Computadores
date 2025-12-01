@@ -26,3 +26,17 @@
       Lucas Pereira          70         75         73
       --------------------------------------------------
 '''
+
+lstNomes = []
+lstNotas1 = []
+lstNotas2 = []
+lstMedias = []
+
+while True:
+   input('Digite o nome do aluno: ').append(lstNomes)
+   Nota1 = int(input('Digite a nota da etapa 1: ')).append(lstNotas1)
+   Nota2 = int(input('Digite a nota da etapa 2: ')).append(lstNotas2)
+   ((Nota1 * 2) + (Nota2 * 3) / 5).append(lstMedias)
+   print('Para? (S ou N)')
+   input('Resposta: ')
+   if 
